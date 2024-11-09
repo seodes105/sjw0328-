@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대한민국 역사와 독도</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .card button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .card button:hover {
+            background-color: #2980b9;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2c3e50;
+            color: #fff;
+            font-size: 14px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>대한민국 역사와 독도</h1>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>대한민국의 역사</h2>
+            <button onclick="showHistory()">대한민국의 역사에 대해 알아보기</button>
+        </div>
+
+        <div class="card">
+            <h2>독도</h2>
+            <button onclick="showDokdo()">독도에 대해 알아보기</button>
+        </div>
+
+        <div id="history" class="content" style="display: none;"></div>
+        <div id="dokdo" class="content" style="display: none;"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 대한민국 역사와 독도. 모든 권리 보유.</p>
+    </footer>
+
+    <script>
+        function showHistory() {
+            const historyContent = `
+                <h3>대한민국의 역사</h3>
+                <p>대한민국의 역사는 매우 오랜 역사를 자랑합니다. 그 기원은 고대 고조선부터 시작됩니다.</p>
+                <p><strong>고대 역사 (BC 2333 ~ 668)</strong></p>
+                <p>고조선은 단군왕검에 의해 기원전 2333년에 건국되었습니다. 고조선은 한반도의 북쪽과 만주 지역을 포함한 넓은 지역에 걸쳐 있었으며, 고대 한국 민족의 기원과 신화를 통해 중요한 역사를 남겼습니다.</p>
+                <p><strong>삼국 시대 (BC 57 ~ 668)</strong></p>
+                <p>고구려, 백제, 신라가 서로 경쟁하며 발전한 시기입니다. 고구려는 강력한 군사력을 바탕으로 북방과 만주까지 영향력을 미쳤고, 백제는 일본과의 교류를 통해 문화적인 중심지로 성장했습니다.</p>
+                <p><strong>고려와 조선 시대 (918 ~ 1897)</strong></p>
+                <p>고려는 몽골 침입과 외세의 침략을 겪으며, 유교와 불교 문화를 발전시켰습니다. 조선은 세종대왕의 한글 창제와 같은 중요한 혁신을 이룩하며, 전 세계적으로 영향을 미친 문화유산을 남겼습니다.</p>
+                <p><strong>근대사와 현대사 (1897 ~ 현재)</strong></p>
+                <p>일제강점기와 광복 후, 한국은 분단과 전쟁을 겪으면서 오늘날의 현대 대한민국을 이루었습니다. 한국은 이제 경제, 문화, 기술 분야에서 세계적으로 주목받는 나라가 되었습니다.</p>
+            `;
+            document.getElementById("history").innerHTML = historyContent;
+            document.getElementById("history").style.display = "block";
+            document.getElementById("dokdo").style.display = "none";
+        }
+
+        function showDokdo() {
+            const dokdoContent = `
+                <h3>독도</h3>
+                <p><strong>독도의 역사적 중요성</strong></p>
+                <p>독도는 한국과 일본 사이의 동해에 위치한 작은 섬으로, 한국의 영토입니다. 독도는 한국의 독립을 상징하는 중요한 땅으로, 수백 년에 걸친 역사적인 배경을 지니고 있습니다.</p>
+                <p>고대부터 독도는 한국의 영토로 인식되었으며, 한국 역사 문서에서 여러 차례 독도의 존재가 언급되었습니다. 일본은 20세기 초반부터 독도를 자신들의 영토라고 주장해왔으나, 한국은 이를 강력히 반박하고 있습니다.</p>
+                <p><strong>독도의 자연 환경</strong></p>
+                <p>독도는 천혜의 자연 환경을 자랑합니다. 깨끗한 바다와 풍부한 해양 생태계로 인해 다양한 해양 생물이 서식하고 있습니다. 또한, 독도는 여러 가지 동식물들이 보호받고 있는 중요한 자연 보호구역입니다.</p>
+                <p><strong>독도와 국제 사회</strong></p>
+                <p>독도 문제는 한국과 일본 사이의 역사적인 갈등을 나타내는 상징적인 이슈입니다. 국제 사회에서도 이 문제에 대한 관심이 높으며, 한국은 국제적으로 독도의 영유권을 주장하고 이를 널리 알리고 있습니다.</p>
+            `;
+            document.getElementById("dokdo").innerHTML = dokdoContent;
+            document.getElementById("dokdo").style.display = "block";
+            document.getElementById("history").style.display = "none";
+        }
+    </script>
+</body>
+</html>
